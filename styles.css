@@ -1,0 +1,307 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #cfcfb1; /* Verde limão */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header .cart-btn {
+    text-align: right;
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
+#produtos, #cta, #contato {
+    padding: 2em;
+    text-align: center;
+}
+
+.produto {
+    display: inline-block;
+    margin: 1em;
+}
+
+.produto img {
+    width: 200px;
+    height: 200px;
+}
+
+button {
+    
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #444; /* Azul leve */
+}
+
+footer {
+    background-color: #cfcfb1;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    font-size: 2em;
+    border-left: 18px solid #cfcfb1; /* Adiciona uma borda do lado esquerdo */
+    text-align: left;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    border: none;
+    
+    right: 20px;
+    top: 20px;
+    padding: 5px 15px;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Modal do Carrinho */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#acoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    
+}
+
+#acoes .openbtn {
+    order: 1;
+}
+
+#acoes .btPesquisa {
+    order: 2;
+}
+
+#acoes .cart-btn {
+    order: 3;
+}
+
+
+.tnh-button {
+    display:block;
+    width:180px;
+    color:#fff
+}
+
+.tnh-sign-up {
+    flex-grow:1
+}
+
+.tnh-button {
+    display:block;
+    flex-shrink:0;
+    height:36px;
+    padding:0 24px;
+    outline:none;
+    border-radius:9999px;
+    background-color:black;
+    color:#fff!important;
+    text-align:center;
+    font-weight:600;
+    font-size:16px;
+    line-height:36px;
+    cursor:pointer
+}
+
+.tnh-sign-up {
+    min-width:120px;
+    color:#fff
+}
+
+.tnh-button:active {
+    text-decoration:none;
+    transform:scale(.9)
+}
+
+.tnh-button:hover {
+    background-color:#444
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar-input {
+    padding: 0.5em 0.5em 0.8em 2em; /* Espaço para o ícone */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 0.1em;
+    color: #888;
+    padding: 0.15em;}
+
+.bgblc {
+    background-color: black;
+    color: #fff;
+}
+
+.tnh-icon {
+    color:#ddd;
+    font-size:40px
+}
+
+.tnh-icon {
+    display:inline-block;
+    width:1em;
+    height:1em;
+    margin-right:6px;
+    overflow:hidden;
+    vertical-align:-.15em;
+    fill:currentColor
+}
+
+.tnh-icon {
+    flex-shrink:0;
+    font-size:24px
+}
+
+.tnh-icon {
+    margin-bottom:5px;
+    font-size:40px;
+    line-height:20px
+}
+
+.tnh-icon {
+    margin-bottom:14px;
+    font-size:40px;
+    line-height:40px
+}
+
+.tnh-icon {
+    margin-bottom:14px;
+    font-size:40px;
+    line-height:40px
+}
+
+.tnh-icon {
+    font-size:24px
+}
+
+.tnh-icon {
+    font-size:24px
+}
+
+.tnh-icon {
+    margin-right:0;
+    font-size:24px
+}
+
+.tnh-icon:last-child {
+    margin-right:0
+}
+
+/* Estilo para a fonte e negrito */
+.highlighted-text {
+    font-family: 'Arial', sans-serif; /* Troque para a fonte desejada */
+    font-weight: bold; /* Adiciona negrito */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo para o contêiner */
+.ds-dot-element.shade-placeholder-item.util-ellipsis {
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas */
+}
