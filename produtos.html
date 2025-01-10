@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page de Suplementos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header-content">
+        <div id="popup-root" class="tnh-popup-root"></div>
+        <div class="tnh-main" data-spm-anchor-id="a2700.pccps_detail.0.i72.5c5313a0YvPi6K">
+            <div class="tnh-logo-content">
+                <div class="tnh-logo" data-spm-anchor-id="a2700.pccps_detail.0.i71.5c5313a0YvPi6K"></div>
+            </div>
+            <div class="functional">
+                <div class="tnh-ship-to" data-tnhkey="Ship to" data-tnh-auto-exp="ship_to" data-tnh-auto-clk="ship_to" data-aplus-ae="x2_3567e7ac" data-spm-anchor-id="a2700.pccps_detail.0.i1.5c5313a0YvPi6K">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        
+    </header>
+
+    <section id="acoes">
+        <span class="menu-btn openbtn" onclick="openNav()">&#9776; Menu</span>
+        <span class="btPesquisa"> 
+            <div class="search-container">
+                <input class="search-bar-input util-ellipsis" size="30" type="text" maxlength="50" placeholder="Qual a sua melhor suplementação?" oninput="filterProducts()">
+                <span class="search-icon-container" onclick="filterProducts()"> 
+                    <svg class="tnh-icon search-icon bgblc" data-encore-id="icon" role="img" aria-hidden="true" data-testid="search-icon" viewBox="-1 0 25 25">
+                        <path d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"></path>
+                    </svg>
+                </span>
+            </div>
+        </span>
+        <span class="cart-btn bgblc openbtn" id="btnCart" alt="Carrinho" width="50" height="40" onclick="openCart()">&#128722;</span>
+    </section>
+
+    <nav id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="index.html#mapa">Onde Encontrar</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    
+    
+    <section id="produtos">
+        <h3>Nossas Promoções</h3>
+        <div class="carousel-container">
+            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="carousel" id="WheyCarousel">
+                <!-- Produtos serão renderizados aqui -->
+            </div>
+            <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+        <section id="social">
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="img/instagram-icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.whatsapp.com" target="_blank">
+                    <img src="img/whatsapp-icon.png" alt="WhatsApp">
+                </a>
+                <a href="https://telegram.org" target="_blank">
+                    <img src="img/telegram-icon.png" alt="Telegram">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="img/linkedin-icon.png" alt="LinkedIn">
+                </a>
+            </div>
+        </section>
+        <div class="carousel-container">
+            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="carousel" id="CreatinaCarousel">
+                <!-- Produtos serão renderizados aqui -->
+            </div>
+            <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="social">
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="img/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank">
+                <img src="img/whatsapp-icon.png" alt="WhatsApp">
+            </a>
+            <a href="https://telegram.org" target="_blank">
+                <img src="img/telegram-icon.png" alt="Telegram">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="img/linkedin-icon.png" alt="LinkedIn">
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Suplementos de Academia. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal do Carrinho -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Produtos Selecionados</h2>
+            <ul id="cartItems"></ul>
+            <button class="bgblc" onclick="confirmClearCart()">Limpar Carrinho</button>
+            <button class="bgblc" onclick="finalizeOrder()">Finalizar Pedido</button>
+            <div id="confirmClearCartModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeConfirmClearCart()">&times;</span>
+                    <h2>Tem certeza que deseja limpar o carrinho?</h2>
+                    <button class="bgblc" onclick="clearCart()">Confirmar</button>
+                    <button class="bgblc" onclick="closeConfirmClearCart()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("YOUR_USER_ID"); // Substitua "YOUR_USER_ID" pelo seu user ID do EmailJS
+    })();
+    </script>
+</body>
+</html>

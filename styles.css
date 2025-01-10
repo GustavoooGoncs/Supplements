@@ -6,11 +6,21 @@ body {
 }
 
 header {
-    background-color: #cfcfb1; /* Verde limão */
+    background-color: #d9d9bc; 
     color: #fff;
     text-align: center;
-    padding: 1em 0;
+    padding: 2em 0;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1);
+    
 }
+
+h2 {
+    color: #ffffff;
+}
+
+p {
+    color: #ffffff;
+}   
 
 header .cart-btn {
     text-align: right;
@@ -26,17 +36,63 @@ header .cart-btn {
 
 #produtos, #cta, #contato {
     padding: 2em;
-    text-align: center;
+    
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    justify-content: flex-start; /* Adiciona esta linha */
 }
 
 .produto {
-    display: inline-block;
+    min-width: 200px;
     margin: 1em;
+    text-align: center;
 }
 
 .produto img {
-    width: 200px;
-    height: 200px;
+    width: 38%;
+    height: auto;
+}
+
+button.bgblc {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+button.bgblc:hover {
+    background-color: #444;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
 }
 
 button {
@@ -57,6 +113,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em 0;
+    box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -107,9 +164,7 @@ header h1 {
     color: white;
     border: none;
     
-    right: 20px;
-    top: 20px;
-    padding: 5px 15px;
+    padding: 10px 11px 8px 10px;
 }
 
 .openbtn:hover {
@@ -161,7 +216,7 @@ header h1 {
     
 }
 
-#acoes .openbtn {
+#acoes .menu-btn {
     order: 1;
 }
 
@@ -172,6 +227,14 @@ header h1 {
 #acoes .cart-btn {
     order: 3;
 }
+
+
+.btPesquisa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 .tnh-button {
@@ -221,16 +284,25 @@ header h1 {
 }
 
 .search-bar-input {
-    padding: 0.5em 0.5em 0.8em 2em; /* Espaço para o ícone */
-    border: 1px solid #ccc;
+    padding: 0.5em 0.5em 1.1em 3em; /* Espaço para o ícone */
+    border: 2px solid #ccc;
     border-radius: 5px;
 }
 
 .search-icon {
     position: absolute;
-    top: 0.1em;
+    top: 0.06em;
     color: #888;
-    padding: 0.15em;}
+    padding: 9px 8px 5px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    background-color: #444;
+}
+
+
 
 .bgblc {
     background-color: black;
@@ -304,4 +376,222 @@ header h1 {
 .ds-dot-element.shade-placeholder-item.util-ellipsis {
     padding: 10px;
     border-radius: 5px; /* Bordas arredondadas */
+}
+
+#contato {
+    padding: 1em;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 2em auto;
+}
+
+
+.formContato {
+    display: inline-block;
+    text-align: left;
+    
+    padding: 2vw;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 80%;
+    width: 80%;
+}
+
+.formContato label {
+    display: flex;
+    margin-bottom: 0.8vw;
+    font-weight: bold;
+}
+
+.formContatoItens {
+    width: calc(100% - 2vw);
+    padding: 1vw;
+    margin-bottom: 2vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.formContatoItens:focus {
+    border-color: black;
+    outline: none;
+}
+
+#social {
+    padding: 1em;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 2em auto;
+}
+
+#social h3 {
+    margin-bottom: 1em;
+    color: black;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .social-icons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+
+#mapa {
+    padding: 1em;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 2em auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.divBackgroundImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divBackgroundImage img {
+    width: 33.33%; /* Ajuste conforme necessário para o efeito desejado */
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombreado entre as imagens */
+}
+
+.divBackgroundImage img:nth-child(1),
+.divBackgroundImage img:nth-child(3) {
+    filter: blur(5px); /* Imagens 1 e 3 borradas */
+}
+
+.divBackgroundImage img:nth-child(2) {
+    filter: none; /* Imagem 2 mais nítida */
+}
+
+#biografia {
+    padding: 1em;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 2em auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('img/musculacao.jpg'), url('img/musculacao.jpg'), url('img/musculacao.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+    height: 130vh; /* Aumenta a altura da seção */
+}
+
+.cta {
+    margin-bottom: 2em;
+    padding: 1em; /* Adiciona padding para aumentar a altura dos elementos internos */
+}
+
+.cta h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.cta p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+.cta button.bgblc {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta button.bgblc:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #biografia {
+        padding: 1em;
+        max-width: 95%;
+    }
+
+    .cta h2 {
+        font-size: 1.5em;
+    }
+
+    .cta p {
+        font-size: 1em;
+    }
+
+    .cta button.bgblc {
+        font-size: 1em;
+    }
 }

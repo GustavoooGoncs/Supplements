@@ -8,110 +8,88 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="header-content">
-        <div id="popup-root" class="tnh-popup-root"></div>
-        <div class="tnh-main" data-spm-anchor-id="a2700.pccps_detail.0.i72.5c5313a0YvPi6K">
-            <div class="tnh-logo-content">
-                <div class="tnh-logo" data-spm-anchor-id="a2700.pccps_detail.0.i71.5c5313a0YvPi6K"></div>
-            </div>
-            <div class="functional">
-                <div class="tnh-ship-to" data-tnhkey="Ship to" data-tnh-auto-exp="ship_to" data-tnh-auto-clk="ship_to" data-aplus-ae="x2_3567e7ac" data-spm-anchor-id="a2700.pccps_detail.0.i1.5c5313a0YvPi6K">
-                    <div class="tnh-login" data-tnhkey="Login">
-                        <div class="tnh-sign-in" data-tnh-auto-exp="sign_in" data-tnh-auto-clk="sign_in" aria-describedby="popup-3" data-aplus-ae="x4_4e34320a" data-spm-anchor-id="a2700.pccps_detail.0.i3.5c5313a0YvPi6K">
-                            <svg class="tnh-icon" aria-hidden="true">
-                                <use xlink:href="#icon-customer"></use>
-                            </svg>
-                            <span class="hide-item">Sign in</span>
-                        </div>
-                        <div class="tnh-current-country" aria-describedby="popup-1">
-                            <div class="deliver-span">Frete grátis:</div>
-                            <div class="tnh-country-flag">
-                                <img src="https://s.alicdn.com/@u/mobile/g/common/flags/1.0.0/assets/br.png" loading="lazy">
-                                <span> BR</span>
-                            </div>
-                        </div>
-                        <div class="tnh-languages" data-tnhkey="Language" data-tnh-auto-exp="languages" data-aplus-ae="x3_44d655d1" data-spm-anchor-id="a2700.pccps_detail.0.i2.5c5313a0YvPi6K">
-                            <div class="current" aria-describedby="popup-2">
-                                <svg class="tnh-icon" aria-hidden="true">
-                                    <use xlink:href="#icon-global"></use>
-                                </svg>
-                            </div>
-                        </div>
+    
+    
+    <header>
+        <div class="header-content">
+            <div id="popup-root" class="tnh-popup-root"></div>
+            <div class="tnh-main" data-spm-anchor-id="a2700.pccps_detail.0.i72.5c5313a0YvPi6K">
+                <div class="tnh-logo-content">
+                    <div class="tnh-logo" data-spm-anchor-id="a2700.pccps_detail.0.i71.5c5313a0YvPi6K"></div>
+                </div>
+                <div class="functional">
+                    <div class="tnh-ship-to" data-tnhkey="Ship to" data-tnh-auto-exp="ship_to" data-tnh-auto-clk="ship_to" data-aplus-ae="x2_3567e7ac" data-spm-anchor-id="a2700.pccps_detail.0.i1.5c5313a0YvPi6K">
                     </div>
                 </div>
+                
             </div>
         </div>
-    </div>
-    <header></header>
-    
+        
+    </header>
     <nav id="sideNav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#cta">Onde Encontrar</a>
+        <a href="#produtos">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="#mapa">Onde Encontrar</a>
         <a href="#contato">Contato</a>
     </nav>
+    
     <section id="acoes">
-        <span class="openbtn" onclick="openNav()">&#9776; Menu</span>
-        <span class="btPesquisa"> 
-            <div class="ds-dot-element shade-placeholder-item util-ellipsis" data-spm-protocol="i"></div>
-            <div class="search-container">
-                <input class="search-bar-input util-ellipsis" size="40" type="text" maxlength="50" placeholder="Qual a sua melhor suplementação?">
-                <svg class="tnh-icon search-icon" data-encore-id="icon" role="img" aria-hidden="true" data-testid="search-icon" viewBox="0 0 30 30">
-                    <path d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"></path>
-                </svg>
-            </div>
-        </span>
-        <button class="cart-btn bgblc" id="btnCart" alt="Carrinho" width="30" height="30" onclick="openCart()">&#128722; Carrinho</button>
+        <span class="openbtn menu-btn" onclick="openNav()">&#9776; Menu</span>
+        
     </section>
     
-    <section id="produtos">
-        <h3>Nossos Produtos</h3>
-        <div class="carousel-container">
-            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-            <div class="carousel">
-                <div class="produto">
-                    <img src="produto1.jpg" alt="Produto 1">
-                    <p>Descrição do Produto 1</p>
-                    <button class="bgblc" onclick="addToCart('Produto 1')">Comprar</button>
-                </div>
-                <div class="produto">
-                    <img src="produto2.jpg" alt="Produto 2">
-                    <p>Descrição do Produto 2</p>
-                    <button class="bgblc" onclick="addToCart('Produto 2')">Comprar</button>
-                </div>
-                <div class="produto">
-                    <img src="produto3.jpg" alt="Produto 3">
-                    <p>Descrição do Produto 3</p>
-                    <button class="bgblc" onclick="addToCart('Produto 3')">Comprar</button>
-                </div>
-                <div class="produto">
-                    <img src="produto1.jpg" alt="Produto 1">
-                    <p>Descrição do Produto 1</p>
-                    <button class="bgblc" onclick="addToCart('Produto 1')">Comprar</button>
-                </div>
-                <div class="produto">
-                    <img src="produto2.jpg" alt="Produto 2">
-                    <p>Descrição do Produto 2</p>
-                    <button class="bgblc" onclick="addToCart('Produto 2')">Comprar</button>
-                </div>
-                <!-- Adicione mais produtos conforme necessário -->
-            </div>
-            <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+    <section id="biografia">
+        <div class="cta">
+            <h2>Não perca tempo!</h2>
+            <p>Retire seus suplementos em uma de nossas academias parceiras. <br>Aproveite nossas promoções exclusivas e melhore seu desempenho com os melhores produtos do mercado.</p>
+        </div>
+        <div class="cta">
+            <h2>Conheça nossos produtos</h2>
+            <p>Explore nossa linha de suplementos e escolha o melhor para você. <br>Temos opções para todos os objetivos e necessidades.</p>
+        </div>
+        <div class="cta">
+            <button class="bgblc" onclick="window.location.href='produtos.html'">Saiba Mais</button>
         </div>
     </section>
 
-    <section id="cta">
-        <h3>Não perca tempo!</h3>
-        <p>Retire seus suplementos em uma de nossas academias parceiras.</p>
-        <button class="bgblc">Saiba Mais</button>
+
+    <section id="social">
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="img/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank">
+                <img src="img/whatsapp-icon.png" alt="WhatsApp">
+            </a>
+            <a href="https://telegram.org" target="_blank">
+                <img src="img/telegram-icon.png" alt="Telegram">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="img/linkedin-icon.png" alt="LinkedIn">
+            </a>
+        </div>
     </section>
+    <section id="mapa">
+        <h3>Localização</h3>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.5733113500864!2d-51.10839752524232!3d-29.991690274950145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951976858e55fe4d%3A0xd3caf182202adfdb!2sAv.%20Bernardino%20Silveira%20Pastoriza%2C%20271%20-%20Sarandi%2C%20Porto%20Alegre%20-%20RS%2C%2091160-310!5e0!3m2!1spt-BR!2sbr!4v1733950776233!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
     <section id="contato">
         <h3>Entre em Contato</h3>
-        <form>
+        <form class="formContato" >
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome">
+            <input class="formContatoItens" required type="text" id="nome" name="nome">
+            <br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input class="formContatoItens" required type="email" id="email" name="email">
+            <br>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" class="formContatoItens" name="message" required></textarea>
+            <br>
+            <br>
             <button class="bgblc" type="submit">Enviar</button>
         </form>
     </section>
@@ -139,6 +117,11 @@
     </div>
 
     <script src="scripts.js"></script>
-    <script src="renderHeader.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("YOUR_USER_ID"); // Substitua "YOUR_USER_ID" pelo seu user ID do EmailJS
+    })();
+    </script>
 </body>
 </html>
